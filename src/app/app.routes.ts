@@ -5,6 +5,15 @@ import { About } from './about/about';
 
 export const routes: Routes = [
     {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+    },
+    {
+        path: 'home',
+        component: About
+    },
+    {
         path: 'login',
         component: Login
     },
@@ -15,5 +24,10 @@ export const routes: Routes = [
     {
         path: 'about',
         component: About
+    },
+    {
+        path: '**',
+        redirectTo: 'home',
+        pathMatch: 'full'
     }
 ];
